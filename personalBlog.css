@@ -17,6 +17,7 @@ body {
   width: 100%;
   margin-bottom: 0;
   font-size: 20px;
+  position: fixed;
 }
 #nav-list {
   list-style: none;
@@ -24,7 +25,6 @@ body {
   justify-content: flex-end;
   margin: 0 20px;
   height: 100%;
-  /*padding:20px 0px;*/
 }
 #nav-list > li a {
   text-decoration: none;
@@ -40,7 +40,6 @@ body {
 }
 #welcome-section {
   color: white;
-  /*background-color:#36373B;*/
   width: 100%;
   height: 100vh;
   background-color: #000;
@@ -60,20 +59,19 @@ h1 {
 #projects {
   background-color: #44567d;
   color: white;
-  padding: 50px 10px;
+  padding: 50px 0;
 }
 h2 {
-  /*padding:30px;*/
+  padding: 0;
   font-weight: 600;
   font-size: 40px;
   border-bottom: 2px solid white;
   max-width: 600px;
-  margin: 50px auto;
+  margin: 60px auto;
 }
 #projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  /*padding:30px 0;*/
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 35px;
   margin: 30px 15px;
 }
@@ -87,7 +85,6 @@ img {
   margin: 0;
   display: block;
   box-shadow: 2px 2px 2px #2d3953;
-  /*background-color:red;*/
   display: block;
   background-color: #303740;
   text-decoration: none;
@@ -114,72 +111,122 @@ img {
   transition: 0.5s;
   padding: 5px;
 }
-#show_all  {
+#show_all {
   background-color: #303740;
   width: 250px;
   color: white;
-  
-  /*height: 50px;*/
-  padding:10px 30px;
+  padding: 10px 30px;
   font-size: 20px;
   font-weight: 500;
   border: hidden;
   border-radius: 2px;
   line-height: 1;
-  transition: 0.5s;
-  text-decoration: none
+  text-decoration: none;
 }
 #show_all:hover {
   background-color: #be3144;
 }
 #show_all:hover .button-span {
-  margin-left: 3px;
+  padding-left: 3px;
+  transition: 0.3s;
 }
-#contact{
-    background-color:#303740 ;
-    color: white;
-    height:500px; 
-    padding:100px 0; 
-    border-bottom: 5px solid  #be3144;
+#contact {
+  background-color: #303740;
+  color: white;
+  height: 460px;
+  padding: 100px 0;
+  border-bottom: 5px solid #be3144;
 }
-#contact-header{ 
-    padding-top:50px; 
-    font-weight: 500; 
+#contact-header {
+  font-weight: 600;
 }
-#contact-paragraph{
-    font-style: italic;
-    font-weight: 100;
-    font-size:17px;
-    margin-bottom:30px;
+#contact-paragraph {
+  font-style: italic;
+  font-weight: 100;
+  font-size: 17px;
+  margin-bottom: 40px;
 }
-#contact-list{
-  list-style:none;
-   display:flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   padding: 20px 10px; 
+#contact-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
-.contact-item{
-    display:inline-block;
-    margin:0 30px; 
+.contact-item {
+  display: block;
+  margin: 0 20px;
 }
-.contact-item a{
-    text-decoration:none; 
-    color: white;
-    font-size:23px;
-    text-shadow: 2px 2px #1E1E20;  
+.contact-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+  text-shadow: 2px 2px #1e1e20;
+  display: inline-block;
 }
-#footer{
-    background-color:#303740; 
-    font-size:18px; 
-    font-weight: 100;
-    color: white;
-    display:flex;
-   /* grid-template-columns:1fr 500px; 
-    grid-gap:30px;*/
-    padding:0 50px;
-    height:100px; ;
-   justify-content:space-around
-;
-   align-items: center;
+#contact-list > li :hover {
+  padding-top: 15px;
+  transition: all 0.5s;
+}
+#footer {
+  background-color: #303740;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+  display: flex;
+  max-height: 150px;
+  padding: 0 50px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  justify-items: flex-start;
+}
+#footer > p {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1075px) {
+  #projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 715px) {
+  #projects-grid {
+    grid-template-columns: 1fr;
+  }
+  img {
+    height: 100%;
+  }
+}
+@media (max-width: 606px) {
+  h2 {
+    max-width: 100%;
+    margin: 0 15px;
+  }
+}
+@media (max-width: 400px) {
+  #nav-list {
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  #contact-header {
+    font-size: 30px;
+  }
+  #contact-paragraph {
+    margin-bottom: 20px;
+  }
+  #contact {
+    height: 100%;
+    padding: 10px;
+  }
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    font-size: 17px;
+    height: 200px;
+  }
 }
