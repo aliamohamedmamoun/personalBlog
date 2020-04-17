@@ -165,7 +165,7 @@ img {
   display: inline-block;
 }
 #contact-list > li :hover {
-  padding-top: 15px;
+  transform:translateY(10px);
   transition: all 0.5s;
 }
 #footer {
