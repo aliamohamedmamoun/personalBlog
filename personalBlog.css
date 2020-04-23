@@ -67,25 +67,24 @@ h2 {
   font-size: 40px;
   border-bottom: 2px solid white;
   max-width: 600px;
-  margin: 60px auto;
+  margin: 40px auto;
 }
 #projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 35px;
-  margin: 30px 15px;
+  margin: 50px 15px;
 }
 img {
   width: 100%;
-  height: 350px;
+  height: 360px;
   margin-bottom: 0;
-  size: cover;
+  object-fit: cover;
 }
 .project-title {
   margin: 0;
   display: block;
   box-shadow: 2px 2px 2px #2d3953;
-  display: block;
   background-color: #303740;
   text-decoration: none;
 }
@@ -94,7 +93,7 @@ img {
   color: white;
   font-size: 20px;
   font-weight: 500;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   display: inline-block;
 }
 
@@ -163,10 +162,10 @@ img {
   font-size: 23px;
   text-shadow: 2px 2px #1e1e20;
   display: inline-block;
+  transition: 0.5s;
 }
 #contact-list > li :hover {
-  transform:translateY(10px);
-  transition: all 0.5s;
+  transform: translateY(10px);
 }
 #footer {
   background-color: #303740;
@@ -174,7 +173,7 @@ img {
   font-weight: 100;
   color: white;
   display: flex;
-  max-height: 150px;
+  height: 100px;
   padding: 0 50px;
   justify-content: space-between;
   align-items: center;
@@ -182,7 +181,7 @@ img {
   justify-items: flex-start;
 }
 #footer > p {
-  padding: 0 20px;
+  padding: 20px;
   margin-top: 20px;
 }
 
@@ -190,10 +189,12 @@ img {
   #projects-grid {
     grid-template-columns: 1fr 1fr;
   }
+
 }
 @media (max-width: 715px) {
   #projects-grid {
     grid-template-columns: 1fr;
+    margin: 40px 20px;
   }
   img {
     height: 100%;
